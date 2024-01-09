@@ -20,10 +20,20 @@
     <h1>Aula 06</h1>
     <p>Teste css</p>
     <script>
-        var n1 = window.prompt("Digite um Número: ");
-        var n2 = window.prompt("Digite outro Número: ");
+        /*
+        var n1 = Number.parseInt(window.prompt("Digite um Número: "));
+        var n2 = Number.parseInt(window.prompt("Digite outro Número: "));
         var s = n1 + n2;
-        window.alert("Soma: " + s);
+        window.alert("Soma: " + s.toString());
+        */
+        var n1 = Number.parseInt(window.prompt("Digite um Número: "));
+        var n2 = Number.parseInt(window.prompt("Digite outro Número: "));
+        var s = n1 + n2;
+        window.alert(`Soma: ${n1 + n2}`);
+        window.alert(typeof(n1));
+        window.alert(`Soma: ${s}`);
+        window.alert(typeof(s));
+        window.alert(String(n1)+n2);
     </script>
 </body>
 </html>

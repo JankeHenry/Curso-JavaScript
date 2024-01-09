@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: rgb(167, 69, 69);
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <h1>ex004</h1>
+    <p>ola mundo</p>
+    <script>
+        var $nome = window.prompt("Digite um nome: ");
+        var $texto = `o nome <strong>${$nome}</strong> tem ${$nome.length} letras<br>`;
+        document.writeln(`${$texto}`);
+        //var texto = texto.toUpperCase();
+        document.writeln(`${$texto.toUpperCase()}` );
+        document.writeln(`${$texto}`);
+        $texto = $texto.toUpperCase();
+        document.writeln(`${$texto}`);
+        document.writeln(`${$texto.toLowerCase()}` );
+        document.writeln(`${$texto}`);
+        $texto = `${$texto.toLowerCase()}`;
+        document.writeln(`${$texto}`);
+
+    </script>
+
+</body>
+</html>
