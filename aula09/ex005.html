@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste DOM</title>
+    <style>
+        body{
+            background-color: rgb(179, 52, 52);
+            color: white;
+            font: normal 25pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testando o <strong> DOM </strong> </h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+   <script>
+        /*
+        document.write(`${window.document.URL}<br>`)
+        //document.write(´${window.document.getElementsByTagName('p')[0].innerText()}<br>aaaaaaaaaaaaaa<br>´);
+        var $p = `<br>${document.getElementsByTagName('p')[1].innerText()}, modificado`.toUpperCase();
+        document.write($p);
+        document.write("qqqqqqqqqqqqqqqxx'");
+        var $p = `<br>${document.getElementsByTagName('p')[1].innerText()}`;
+        document.write(`${$p}`);
+       
+        var $body = window.document.body;
+        var $p = document.getElementsByTagName('p')[1];
+        $p.style.color = 'pink';
+        $body.style.background = 'white'
+        $body.style.color = 'black'
+        //$p.style.fontSize = 190;
+        document.write($p.innerText+'<br>');
+        document.write($p.innerHTML);
+        */
+        //----------------------------------------
+        var d = '<br>'+window.document.getElementById('msg');
+        d.style.background = 'green'
+        d.innerText = "Estou Aguardando...";
+        window.document.getElementById('msg').innerText = 'ola';
+        document.write();      
+
+        var x = document.querySelector('div#msg');
+        x.style.background = 'white';
+        //document.write(`${x.innerText}`);
+    </script>
+</body>
+</html>

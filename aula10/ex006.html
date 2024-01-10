@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            background: blueviolet;
+            color: white;
+            font: normal 10pt Arial;
+            width: 100px;
+            height: 100px;
+            border-radius: 9px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area" >
+        interaja...
+
+
+    </div>
+    <script>
+        /* 
+        document.write(`${$elemento}`);
+        document.body.style.color = 'pink';
+        document.body.style.background = 'black'
+        */
+        var $elemento = window.document.querySelector('div#area');
+        $elemento.addEventListener('click', clicar);
+        $elemento.addEventListener('mouseenter', entrar);
+        $elemento.addEventListener('mouseout', sair);
+        function clicar(){
+            
+            $elemento.innerText= 'clicou';
+            $elemento.style.background = "black"
+            $elemento.style.color = 'white';
+
+            /*
+            $janela.style.background = "yellow";
+            $janela.style.color = 'black';
+            $janela.innerHTML = 'você';
+            $janela = document.body.style.background = 'pink';
+            $janela = document.body.style.color = "black"
+            */
+            sair();
+        }
+       function entrar(){
+            
+           $elemento.style.background = 'red';
+       }
+        function sair(){
+             
+           clicar();
+        }
+    </script>
+</body>
+</html>
