@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao pra comear o dia 3</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            font: normal 25pt Arial;
+        }
+        h1{
+            text-align: center;
+        }
+        /*input{
+            align-items: center;
+        }
+        */
+    </style>
+</head>
+<body>
+    
+    <h1>SOMADOR</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Soma">
+    <div>RESULTADO DA SOMA: </div>
+    <script>
+        var $var1 = document.querySelector('input#num1');
+        var $var2 = document.querySelector('input#num2');
+        
+        var n1 = Number($var1);
+        var n2 = Number($var2);
+
+        window.document.write(`${$var1.innerHTML}`);
+    </script>
+</body>
+
+
+</html>
