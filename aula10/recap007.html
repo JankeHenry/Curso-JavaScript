@@ -6,7 +6,7 @@
     <title>Revisao pra comear o dia 3</title>
     <style>
         body{
-            background: black;
+            background: rgb(255, 0, 85);
             color: white;
             font: normal 25pt Arial;
         }
@@ -24,16 +24,27 @@
     <h1>SOMADOR</h1>
     <input type="number" name="num1" id="num1">
     <input type="number" name="num2" id="num2">
-    <input type="button" value="Soma">
-    <div>RESULTADO DA SOMA: </div>
+    <input type="button" value="Soma" onclick="clicar()" >
+    <div id="soma">RESULTADO DA SOMA: </div>
     <script>
-        var $var1 = document.querySelector('input#num1');
-        var $var2 = document.querySelector('input#num2');
-        
-        var n1 = Number($var1);
-        var n2 = Number($var2);
+        var $elemento = document.querySelector('div#soma');
+        $elemento.addEventListener('mouseenter', entrar());
+        function entrar(){
+            $elemento.style.width = 100;
+        }
+        function clicar(){
+            var $var1 = document.querySelector('input#num1');
+            var $var2 = document.querySelector('input#num2');
+            var $resultado = window.document.querySelector('div#soma');
+            var $n1 = Number($var1.value);
+            var $n2 = Number($var2.value);
+            
 
-        window.document.write(`${$var1.innerHTML}`);
+            var $soma = $n1 + $n2;
+            
+            $resultado.innerHTML = `${$soma}`;
+        }
+        
     </script>
 </body>
 

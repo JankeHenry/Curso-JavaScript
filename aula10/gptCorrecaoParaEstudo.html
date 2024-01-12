@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão para começar o dia 3</title>
+    <style>
+        body {
+            background: rgb(255, 0, 85);
+            color: white;
+            font: normal 25pt Arial;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>SOMADOR</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Soma" onclick="clicar()" >
+    <div id="soma">RESULTADO DA SOMA: </div>
+
+    <script>
+        var $divSoma = document.querySelector('div#soma');
+
+        $divSoma.addEventListener('mouseenter', entrar);
+        $divSoma.addEventListener('mouseleave', sair);
+
+        function entrar() {
+            $divSoma.style.width = '150px'; // Altere a largura conforme necessário
+        }
+
+        function sair() {
+            $divSoma.style.width = 'auto'; // Retorna à largura automática
+        }
+
+        function clicar() {
+            var $var1 = document.querySelector('input#num1');
+            var $var2 = document.querySelector('input#num2');
+            var $resultado = document.querySelector('div#soma');
+            var $n1 = Number($var1.value);
+            var $n2 = Number($var2.value);
+
+            // Validação de entrada
+            if (isNaN($n1) || isNaN($n2)) {
+                alert('Por favor, insira números válidos.');
+                return;
+            }
+
+            var $soma = $n1 + $n2;
+            
+            $resultado.innerHTML = `RESULTADO DA SOMA: ${$soma}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <style>
+        body{
+            background: pink;
+            font: normal 15pt Arial;
+            color: black;
+            text-align: center;
+        }
+        .botoes{
+            color: red;
+            text-align: center;
+        }
+        .botoes input[type = "button"]{
+            background: orange;
+            color: purple;
+            border: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txt1" id="n1">
+    <input type="number" name="txt2" id="n2">
+    <br>
+    <div class="botoes">
+        
+        <input type="button" value="SOMA">
+        <input type="button" value="SUBTRAÇÃO">
+        <input type="button" value="DIVISAO">
+        <input type="button" value="MULTIPLICAÇÃO">
+        <input type="button" value="EXPONENCIAÇÃO">
+        <p>comandos: </p>
+    </div>
+    <div id="resultado">resultado</div>
+    <script>
+        $elemento = document.querySelector('div#resultado');
+        $elemento.addEventListener('click', clicar);
+        function clicar(){
+            var numEx1 = document.querySelector('input#n1');
+            var numEx2 = document.querySelector('input#n1');
+
+            var n1 = Number(numEx1.value);
+            var n2 = Number(numEx2.value);
+            var soma = n1 + n2;
+            $elemento = document.querySelector('div#SOMA'):$elemento.innerText = `$soma`:$elemento.innerText = `123`;
+            //FALHA METODO TERNARIO
+        }
+
+    </script>
+</body>
+</html>
