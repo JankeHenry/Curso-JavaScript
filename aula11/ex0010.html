@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>DETRAN</h1>
+    Velocidade do carro :<input type="number" name="txtVel" id="vel">KM/H
+    <br><input type="button" value="Verificar" id="resul">
+    <div id="Resultado"></div>
+    <script>
+        var botao = document.querySelector('input#resul');
+        botao.addEventListener('click', clicar);
+
+        function clicar(){
+            var $resu = document.querySelector('div#Resultado'); // Corrigido o ID da div
+
+            var $txtVel = document.querySelector('input#vel');
+            var $vel = Number($txtVel.value);
+            $resu.innerText = `Sua velocidade atual é de ${$vel} km/h`
+            
+            if ($vel > 60) {
+                
+                $resu.innerText += `MULTADO`
+            } else {
+                $resu.innerText += `Boa viagem`;
+            }
+        }
+    </script>
+</body>
+</html>

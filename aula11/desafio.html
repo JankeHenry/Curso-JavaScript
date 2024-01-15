@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background: palevioletred;
+            color: white;
+            font: normal 20pt Arial;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite seu país de origem<input type="text" name="txtNacionalidade" id="Nacionalidade">
+    <br><input type="button" value="enviar" id="env">
+    <div id="resposta"></div>
+    <script>
+        var $click = document.querySelector('input#env')
+        $click.addEventListener('click',clicar)
+        function clicar(){
+            var $resp = document.querySelector('div#resposta')
+            var $nacionalidade = document.querySelector('input#Nacionalidade').value
+            $resp.innerHTML = `País: ${$nacionalidade}`
+            if($nacionalidade == 'Brasil'){
+                $resp.innerHTML += `<br>Você é Brasileiro`
+            }else{
+                $resp.innerHTML += `<br>Você é Gringo`
+            }
+
+        }
+
+    </script>
+</body>
+</html>
